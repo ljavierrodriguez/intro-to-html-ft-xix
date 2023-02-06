@@ -124,11 +124,60 @@ p + span {
     margin: 10px 0;
     color: blue;
 }
+
+
+/* Selector Hermano */
+
+
+.info > h3 ~ p {
+    color: pink;
+}
+
+/* Selector de Atributo */
+
+/* que este presente el atributo class */
+a[class]{
+    color: green;
+}
+
+/* que el atributo class sea igual al valor dado */
+a[class="link"] {
+    color: brown;
+}
+
+/* que el atributo class incluya el valor dado */
+a[class*="3"]{
+    color: gray;
+}
+
+/* que el atributo href comience con el valor dado */
+a[href^="https://"]{
+    color: crimson;
+}
+
+/* que el atributo href termine con el valor dado */
+a[href$=".com"]{
+    color: darkgoldenrod;
+}
+
+
+/* que el atributo contenta el valor dado */
+a[class~="link2"]{
+    color: blueviolet;
+}
+
+a:hover {
+    color: blue;
+}
+
+
+
 .content {
     width: 300px;
     height: 300px;
     background-color: cadetblue;
     color: white;
+    margin-bottom: 80px;
 }
 
 .content > .header {
@@ -141,4 +190,78 @@ p + span {
     width: 100%;
     height: 100vh;
     background-color: cornflowerblue;
+}
+
+.usuarios {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+    border: 1px solid black;
+}
+
+.usuarios .usuario {
+    width: 300px;
+    height: 60px;
+    display: flex;
+    border: 1px solid gray;
+    background-color: aquamarine;
+}
+
+.usuarios .usuario .photo {
+    width: 60px;
+    height: 60px;
+    /* background-color: cadetblue; */
+}
+
+.usuarios .usuario .photo img {
+    border-radius: 100%;
+}
+
+.usuarios .usuario .info p {
+    width: 100%;
+    font-size: 15px;
+    margin: 5px 0 0;
+}
+
+.usuario .info span {
+    font-size: 10px;
+    color: gray;
+}
+
+.box {
+    width: 200px;
+    height: 200px;
+    background-color: blueviolet;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.box .punto {
+    width: 10px;
+    height: 10px;
+    background-color: white;
+}
+
+
+@media screen and (min-width: 320px) and (max-width: 499px){
+    body {
+        background-color: #ccc;
+    }
+}
+
+@media screen and (min-width: 500px) and (max-width: 699px){
+    body {
+        background-color: #666;
+    }
+}
+
+@media screen and (min-width: 700px) and (max-width: 1023px) {
+    body {
+        background-color: #999;
+    }
 }
