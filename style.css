@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sassy+Frass&display=swap');
+/* CSS Document */
+/* Especificidad: (id, class, element) (1, 0, 0) */
+/* 
+properties: margin, padding;
+
+sides: t = top; r = right; b = bottom; l = left;
+
+margin: 20px; // trbl
+margin: 20px 20px; tb rl
+maring: 20px 20px 20px; t rl b
+margin: 20px 20px 20px 20px; t r b l
+
+padding: 20px; // trbl
+padding: 20px 20px; tb rl
+padding: 20px 20px 20px; t rl b
+padding: 20px 20px 20px 20px; t r b l
+
+*-top: 20px;
+*-right: 20px;
+*-bottom: 20px;
+*-left: 20px;
+
+selector {
+    property: value;
+}
+
+*/
+
+/* Selector Universal */
+
+/* {
+    margin: 0;
+    padding: 0;
+    margin: 2px;
+    border: 1px solid black;
+} */
+
+/* Selector de ID */
+
+#titulo  {
+    color: blue;
+    font-size: 50px;
+    box-shadow: 2px 2px 5px #666;
+    font-family: 'Sassy Frass', 'Roboto';
+}
+
+#main {
+    width: 300px;
+    height: auto;
+    margin: 20px auto;
+    background-color: cadetblue;
+    color: white;
+}
+
+/* Selector de Clase */
+
+.menu {
+    font-size: 20px;
+    font-family: 'Roboto', Courier, monospace;
+    color: greenyellow;
+}
+
+/* Selector Descendiente */
+
+#home #menu {
+    background-color: brown;
+    color: white;
+    text-align: center;
+    font-family: 'Roboto';
+}
+
+/* Selector Hijo */
+
+#home > .menu {
+    background-color: brown;
+    color: white;
+    text-align: center;
+    font-family: 'Roboto';
+}
+
+#home > #header > .menu {
+    background-color: brown;
+    color: white;
+    text-align: center;
+    font-family: 'Roboto';
+}
+
+/* Selector de Elemento o Etiqueta */
+
+p {
+    color: red;
+}
+
+a {
+    color: red;
+}
+
+h1, h2, h3 {
+    color: blueviolet;
+}
+
+h4, h5, h6 {
+    color: brown;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    width: 50%;
+    margin: 20px auto;
+}
+
+#header, #main, #footer {
+    width: 100%;
+}
+
+#header {
+    color: blanchedalmond;
+}
+
+/* Selector Adyacente */
+
+p + span {
+    margin: 10px 0;
+    color: blue;
+}
+.content {
+    width: 300px;
+    height: 300px;
+    background-color: cadetblue;
+    color: white;
+}
+
+.content > .header {
+    width: 100%;
+    height: auto;
+    background-color: blueviolet;
+}
+
+.content > .header + .body {
+    width: 100%;
+    height: 100vh;
+    background-color: cornflowerblue;
+}
